@@ -4,4 +4,7 @@ node_js:
   - "6"
   - "5"
   - "4"
-script: nyc npm test && nyc report --reporter=text-lcov | coveralls
+before_script:
+  - npm install -g nyc
+script:
+  - nyc npm test && nyc report --reporter=text-lcov | coveralls
