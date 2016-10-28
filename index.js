@@ -20,9 +20,9 @@ exports.createSandbox = function(done, defaultTimeout) {
     var timeoutHandle = null;
     if (is.number(timeout)) {
       timeoutHandle = setTimeout(function(){
-        if (is.fn(done) && !called) {
+        if (!called) {
           called = true;
-          done(new Error('Timeout:'+fn.name+' callback is timeout.'));
+          fn(new Error('Timeout:'+fn.name+' callback is timeout.'));
         }
       }, timeout);
     }
@@ -30,6 +30,7 @@ exports.createSandbox = function(done, defaultTimeout) {
     return function() {
       try{
         fn.apply(this, Array.from(arguments));
+        called = true;
       }catch(e) {
         if (is.fn(done) && !called){
           if (timeoutHandle) {

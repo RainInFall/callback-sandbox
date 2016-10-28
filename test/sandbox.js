@@ -52,16 +52,16 @@ describe('sandbox', function() {
     this.timeout(5000);
 
     var called = false;
-    var sandbox = createSandbox(function(err){
-      called = true;
+    var sandbox = createSandbox(2000);
+    var fn = sandbox(function(err){
+      expect(called).toBe(false);
       expect(err).toBeAn(Error);
       expect(err.message).toMatch(/Timeout/);
+      called = true;
+    });
+    setTimeout(function() {
       done();
     }, 2000);
-    var fn = sandbox(function(){});
-    setTimeout(function(){
-      expect(called).toBe(false);
-    },1000);
   });
 
   it('should block second call', function(){
