@@ -1,6 +1,6 @@
 # callback-sandbox
-[![build status](https://travis-ci.org/RainInFall/callback-sandbox.svg?branch=master)](https://travis-ci.org/RainInFall/callback-sandbox.svg?branch=master)
-[![coverage](https://coveralls.io/repos/github/RainInFall/callback-sandbox/badge.svg)](https://coveralls.io/repos/github/RainInFall/callback-sandbox/badge.svg)
+[![build status](https://travis-ci.org/RainInFall/callback-sandbox.svg?branch=master)](https://travis-ci.org/RainInFall/callback-sandbox)
+[![coverage](https://coveralls.io/repos/github/RainInFall/callback-sandbox/badge.svg)](https://coveralls.io/repos/github/RainInFall/callback-sandbox?branch=master)
 A function wrapper to avoid exception pop to top, or callback when timeout
 
 ## Installation

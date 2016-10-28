@@ -47,7 +47,7 @@ describe('sandbox', function() {
     });
     var fn = sandbox(function(){
       throw new Error('something wrong happen');
-    });
+    }, 2000);
     expect(fn).toNotThrow();
   });
 
