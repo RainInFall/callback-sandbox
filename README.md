@@ -20,13 +20,13 @@ setTimeout(sandbox(function(err){
 
 ## API
 ### createSandbox([onError][timeout])
-* onError Call whem an unhandle exception occur in sandbox
-* timeout Default timeout of sandbox
+* **onError** Call whem an unhandle exception occur in sandbox
+* **timeout** Default timeout of sandbox
 
 Create a sandbox.
 
 
 ### sandbox(fn, [timeout])
-* fn Function to run in the sandbox
-* timeout Timeout for this run.
+* **fn** Function to run in the sandbox
+* **timeout** Timeout for this run.
 Run function in sandbox and start timeout.
