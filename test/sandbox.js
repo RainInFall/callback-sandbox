@@ -41,7 +41,10 @@ describe('sandbox', function() {
   });
 
   it('should block throw', function() {
-    var sandbox = createSandbox();
+    var sandbox = createSandbox(function(err){
+      expect(err).toBeAn(Error);
+      expect(err.message).toBe('something wrong happen');
+    });
     var fn = sandbox(function(){
       throw new Error('something wrong happen');
     });
