@@ -1,0 +1,32 @@
+{
+  "name": "callback-sandbox",
+  "version": "0.0.1",
+  "description": "a function wrapper to avoid exception pop to top",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc --reporter=lcov node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainInFall/callback-sandbox.git"
+  },
+  "keywords": [
+    "sandbox",
+    "callback"
+  ],
+  "author": "RainInFall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RainInFall/callback-sandbox/issues"
+  },
+  "homepage": "https://github.com/RainInFall/callback-sandbox#readme",
+  "dependencies": {
+    "is": "^3.2.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.1.2",
+    "nyc": "^8.3.2"
+  }
+}
